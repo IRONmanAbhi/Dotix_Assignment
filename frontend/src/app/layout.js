@@ -1,9 +1,13 @@
+import "./globals.css";
+
+export const metadata = {
+  title: "Job Scheduler Dashboard",
+};
+
 export default function RootLayout({ children }) {
   return (
-    <html>
+    <html lang="en">
       <body>
-        <h1>Job Scheduler Dashboard</h1>
-        <hr />
         {children}
       </body>
     </html>
