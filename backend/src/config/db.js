@@ -12,7 +12,7 @@ import { ENV } from "./env.js";
     }
 );*/
 
-const sequelize = new Sequelize(process.env.MYSQL_URL, {
+export const sequelize = new Sequelize(process.env.MYSQL_URL, {
   dialect: "mysql",
   logging: false,
 });
