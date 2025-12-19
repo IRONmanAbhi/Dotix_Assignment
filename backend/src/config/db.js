@@ -1,7 +1,7 @@
 import { Sequelize } from "sequelize";
 import { ENV } from "./env.js";
 
-export const sequelize = new Sequelize(
+/*export const sequelize = new Sequelize(
     ENV.DB_NAME,
     ENV.DB_USER,
     ENV.DB_PASSWORD,
@@ -10,7 +10,13 @@ export const sequelize = new Sequelize(
         dialect: "mysql",
         logging: false
     }
-);
+);*/
+
+const sequelize = new Sequelize(process.env.MYSQL_URL, {
+  dialect: "mysql",
+  logging: false,
+});
+
 
 export const connectDB = async () => {
     try {
